@@ -1,0 +1,10 @@
+{
+  "name": "AI Radio Studio",
+  "description": "Generate custom multi-host radio shows powered by Gemini agents, with interactive sound effects, live audio playback, and customizable templates.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

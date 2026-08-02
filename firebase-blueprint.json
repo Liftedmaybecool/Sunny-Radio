@@ -1,0 +1,42 @@
+{
+  "schemaVersion": "1.0",
+  "entities": {
+    "users": {
+      "description": "Registered user accounts and profiles",
+      "properties": {
+        "email": { "type": "string", "description": "User email address" },
+        "name": { "type": "string", "description": "User full display name" },
+        "passwordHash": { "type": "string", "description": "Account password string" },
+        "createdAt": { "type": "number", "description": "Account creation timestamp" }
+      },
+      "required": ["email", "name", "passwordHash"]
+    },
+    "verifications": {
+      "description": "6-digit email verification security codes",
+      "properties": {
+        "email": { "type": "string", "description": "Target email address" },
+        "code": { "type": "string", "description": "6-digit verification code" },
+        "fullName": { "type": "string", "description": "Full name if registering" },
+        "type": { "type": "string", "description": "register or forgot_password" },
+        "expires": { "type": "number", "description": "Expiration timestamp in ms" }
+      },
+      "required": ["email", "code", "expires"]
+    },
+    "radio_shows": {
+      "description": "Generated and saved AI radio shows and episodes",
+      "properties": {
+        "id": { "type": "string", "description": "Show identifier" },
+        "userEmail": { "type": "string", "description": "Email of show creator" },
+        "topic": { "type": "string", "description": "Show topic or prompt" },
+        "title": { "type": "string", "description": "Show title" },
+        "tagline": { "type": "string", "description": "Station tagline" },
+        "tone": { "type": "string", "description": "Broadcast tone" },
+        "durationMinutes": { "type": "number", "description": "Show duration" },
+        "host1Name": { "type": "string", "description": "First host name" },
+        "host2Name": { "type": "string", "description": "Second host name" },
+        "createdAt": { "type": "number", "description": "Creation timestamp" }
+      },
+      "required": ["id", "topic", "title"]
+    }
+  }
+}
